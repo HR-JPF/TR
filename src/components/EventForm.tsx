@@ -182,17 +182,17 @@ export default function EventForm({ userId, eventToEdit, onClose, onSaveSuccess 
         userId,
         title,
         eventTime: utcTimeIso,
-        link: link.trim() || undefined,
-        notes: notes.trim() || undefined,
+        link: link.trim() || "",
+        notes: notes.trim() || "",
         status: eventToEdit ? eventToEdit.status : "active",
         reminderRules: rulesToSave,
         updatedAt: new Date().toISOString() as any,
       };
 
       if (selectedTemplateId !== "custom") {
-        (eventPayload as any).templateId = selectedTemplateId;
+        (eventPayload as any).templateId = selectedTemplateId || "";
       } else {
-        (eventPayload as any).templateId = null;
+        (eventPayload as any).templateId = "";
       }
 
       if (eventToEdit && eventToEdit.id) {

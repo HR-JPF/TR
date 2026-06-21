@@ -95,15 +95,18 @@ export default function App() {
       {/* Top Navigation Frame */}
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-100 py-4 px-6 shadow-sm">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center text-white font-extrabold shadow-md shadow-amber-650 animate-pulse">
-              <span className="text-lg">ت</span>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center text-white font-extrabold shadow-md shadow-amber-650 animate-pulse">
+                <span className="text-lg">ت</span>
+              </div>
+              <div>
+                <div className="flex items-center gap-1.5">
+                  <span className="font-bold text-lg text-slate-800 tracking-tight font-sans">منصة تذكير</span>
+                  <span className="text-[9px] md:text-[10px] font-mono bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full font-bold">v2.0.0</span>
+                </div>
+                <span className="text-[10px] text-slate-400 block -mt-1">نظام جدولة التنبيهات المخصص (SaaS)</span>
+              </div>
             </div>
-            <div>
-              <span className="font-bold text-lg text-slate-800 tracking-tight font-sans">منصة تذكير</span>
-              <span className="text-[10px] text-slate-400 block -mt-1">نظام جدولة التنبيهات المخصص (SaaS)</span>
-            </div>
-          </div>
 
           <div className="flex items-center gap-4">
             {!isFirebaseConfigured && view !== "dashboard" && (
@@ -188,7 +191,7 @@ export default function App() {
               <span>•</span>
               <a href="#" className="hover:text-amber-500 transition">المستند التقني للبايثون</a>
             </div>
-            <p className="text-slate-500 mt-2">© {new Date().getFullYear()} منصة تذكير. جميع الحقوق محفوظة.</p>
+            <p className="text-slate-500 mt-2">© {new Date().getFullYear()} منصة تذكير (إصدار v2.0.0). جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
